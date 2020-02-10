@@ -1,0 +1,75 @@
+﻿<Window x:Class="ThirdWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ThirdWpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl Margin="15" SelectionChanged="TabControl">
+            <TabItem Header="Grouped group" x:Name="Tab1">
+                <GroupBox Header="A group box" Margin="15">
+                    <StackPanel>
+                        <RadioButton Click="RadioButton_1" Margin="5">Select Tab2</RadioButton>
+                        <RadioButton Click="RadioButton_2" Margin="5">Disable Tab2</RadioButton>
+                        <RadioButton Click="RadioButton_3" Margin="5">Enable Tab2</RadioButton>
+                        <RadioButton Click="RadioButton_4" Margin="5">Enable Expander</RadioButton>
+                    </StackPanel>
+                </GroupBox>
+            </TabItem>
+            <TabItem Header="Yes" IsSelected="True" x:Name="Tab2">
+                <Label>NO</Label>
+            </TabItem>
+            <TabItem x:Name="Tab3" Header="Expander">
+                <StackPanel>
+                    <Expander Header="Question 001">
+                        <TextBlock>ДАДАДАДАДАДАДАДАДАДДАДАДАДАДАДДАДАДАДДАДАДАДАДАДАДАДАДАДАДАДАД</TextBlock>
+                    </Expander>
+                    <Expander Header="Question 002">
+                        <TextBlock x:Name="TextBlock">НЕТ НЕТ НЕТ НЕТ НЕТ НЕТ НЕТ</TextBlock>
+                    </Expander>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="TextBox">
+                <StackPanel>
+                     <TextBox TextWrapping="WrapWithOverflow" MinLines="1" ScrollViewer.CanContentScroll="False" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+
+                     </TextBox>
+                     <PasswordBox x:Name="pbPassword" Password="12345678"></PasswordBox>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="ListBox">
+                <ListBox>
+                    <ListBoxItem>
+                        <StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                        </Grid>
+                            <Image Width="100"  Source="https://ih1.redbubble.net/image.782381445.7257/flat,750x,075,f-pad,750x1000,f8f8f8.u10.jpg" Grid.Column="0"></Image>
+                            <Label Grid.Column="1">Love Death &#38; Robots</Label>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>2</ListBoxItem>
+                    <ListBoxItem>3</ListBoxItem>
+                    <ListBoxItem>4</ListBoxItem>
+                </ListBox>
+            </TabItem>
+            <TabItem Header="ComboBox">
+                <ComboBox Height="50">
+                    <ComboBoxItem>1</ComboBoxItem>
+                    <ComboBoxItem>2</ComboBoxItem>
+                    <ComboBoxItem>3</ComboBoxItem>
+                    <ComboBoxItem>4</ComboBoxItem>
+                    <ComboBoxItem>5</ComboBoxItem>
+                </ComboBox>
+            </TabItem>
+        </TabControl>
+        
+
+    </Grid>
+    
+</Window>
